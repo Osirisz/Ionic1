@@ -22,3 +22,18 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+.config(function($stateProvider, $urlRouterProvider, $locationProvider){
+  $stateProvider
+    .state('login',{
+      url: '/login',
+      templateUrl: 'templates/login.html',
+      controller: 'loginController'
+    })
+    .state('about',{
+      url: '/about:{name}/{nick}/{social}/{mobile}',
+      templateUrl: 'templates/about.html',
+      controller: 'aboutController'
+    })
+  $urlRouterProvider.otherwise('/login');
+  // $locationProvider.html5Mode(true);
+})

@@ -1,0 +1,14 @@
+<ion-view>
+  <ion-nav-bar>
+    <ion-nav-title>MEGA2017 {{myName}}</ion-nav-title>
+  </ion-nav-bar>
+  <ion-content>
+    <div class="list list-inset">
+      <div class="item" ng-repeat="data in myDataArray" ng-click="logList(data)">
+        {{data.name}}
+        {{data.mobile}}
+      </div>
+    </div>
+    <button class="button button-full button-assertive" ng-click="btnGo()">Go</button>
+  </ion-content>
+</ion-view>
